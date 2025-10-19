@@ -227,7 +227,164 @@ pnpm dev
 **Sollte Next.js Seite zeigen - ohne Fehler!** ✅
 
 ---
+# Teil 2.5: Projekt-Dokumentation verstehen (WICHTIG!)
 
+## Was ist gerade passiert?
+
+Cursor hat einen `/docs` Ordner mit 4 Templates erstellt:
+
+```
+/docs/
+├── README.md           # Dokumentations-Hub
+├── tech-stack.md       # Tech-Infos (Port, Versionen)
+├── design-system.md    # Farben, Fonts, Spacing
+└── sitemap.md          # Seiten-Struktur
+```
+
+---
+
+## 🧠 Warum ist das das "Gehirn" deines Projekts?
+
+**Das ist deine "Single Source of Truth"!**
+
+### Ohne diese Docs:
+
+❌ Cursor erfindet jedes Mal neue Farben
+❌ Cursor nutzt inkonsistente Styles
+❌ Cursor weiß nicht, welche Seiten existieren sollen
+❌ Jede Komponente sieht anders aus
+
+### Mit diesen Docs:
+
+✅ Cursor prüft **automatisch** die Dokumentation
+✅ Cursor nutzt **nur definierte Farben**
+✅ Cursor folgt **deiner Struktur**
+✅ Konsistenter Code über das gesamte Projekt
+
+---
+
+## 🔗 Wie funktioniert die Magie?
+
+**Deine Global Rules** (die du in Teil 4 erstellt hast) sagen Cursor:
+
+```
+Before writing ANY component with styles:
+1. Check for design system documentation (in docs/)
+```
+
+**Das bedeutet:**
+
+Wenn du sagst: `@Cursor Erstelle einen Button`
+
+**Cursor macht:**
+1. 🔍 Öffnet `docs/design-system.md`
+2. 📖 Liest: "Primary Color: #60BEAF (neptune)"
+3. 💻 Erstellt: `<Button className="bg-neptune">`
+
+**NICHT:**
+- ❌ `<Button className="bg-blue-500">` (random Farbe)
+- ❌ `<Button style={{background: '#1234AB'}}>` (erfundene Farbe)
+
+---
+
+## 📝 Was du JETZT tun musst
+
+Die Templates sind **Platzhalter** - du musst sie ausfüllen!
+
+### 1. design-system.md (10 Min)
+
+**Öffne:** `docs/design-system.md`
+
+**Fülle aus:**
+- Deine Farben (Hex-Codes + Namen)
+- Deine Font (z.B. Inter, Roboto)
+- Tailwind Config kopieren & anpassen
+
+**Oder frag Cursor:**
+
+```
+Schlage mir eine professionelle Farbpalette für meine Website vor.
+Zielgruppe: [deine Zielgruppe]
+Branche: [deine Branche]
+Stil: [Modern/Klassisch/etc.]
+
+Aktualisiere docs/design-system.md damit.
+```
+
+---
+
+### 2. sitemap.md (15 Min)
+
+**Öffne:** `docs/sitemap.md`
+
+**Plane:**
+- Welche Seiten brauchst du?
+- Wie sind die URLs?
+- Was ist auf jeder Seite?
+
+**Oder mit Claude (empfohlen):**
+
+1. Claude-Projekt erstellen
+2. Infos zu deinem Business hochladen
+3. Prompt: "Erstelle eine Sitemap für meine Website"
+4. Output nach `docs/sitemap.md` kopieren
+
+---
+
+### 3. tech-stack.md (2 Min)
+
+**Öffne:** `docs/tech-stack.md`
+
+**Meist schon korrekt befüllt!** Nur prüfen:
+- Port richtig? (z.B. 3030)
+- Domains richtig?
+- Alle Versionen korrekt?
+
+---
+
+## ✅ Warum dieser Schritt so wichtig ist
+
+**Ohne ausgefüllte Docs:**
+- Cursor arbeitet "blind"
+- Inkonsistente Ergebnisse
+- Du musst ständig korrigieren
+
+**Mit ausgefüllten Docs:**
+- Cursor arbeitet wie ein gut-gebriefter Entwickler
+- Konsistenter Code
+- Schnellere Entwicklung
+- Bessere Qualität
+
+---
+
+## 🎯 Quick-Check
+
+**Sind deine Docs fertig?**
+
+```bash
+# Öffne jedes Dokument:
+cat docs/design-system.md  # Farben definiert?
+cat docs/sitemap.md        # Seiten geplant?
+cat docs/tech-stack.md     # Infos korrekt?
+```
+
+**Wenn alle ausgefüllt:** ✅ Weiter zu Teil 3!
+
+**Wenn noch Platzhalter:** ⏸️ Jetzt ausfüllen!
+
+---
+
+**Zeit investieren:** 15-30 Minuten in Docs
+**Zeitersparnis:** Stunden später bei der Entwicklung! ⚡
+
+**Das erklärt jetzt:**
+- ✅ WARUM die Docs wichtig sind
+- ✅ WIE Cursor sie nutzt (durch Global Rules!)
+- ✅ WAS ausgefüllt werden muss
+- ✅ Zeit-Investment vs. Zeitersparnis
+
+
+---
 # Teil 3: GitHub Repository
 
 ## 3.1 Check gh auth
