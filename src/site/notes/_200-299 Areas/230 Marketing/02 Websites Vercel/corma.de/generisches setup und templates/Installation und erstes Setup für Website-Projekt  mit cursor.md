@@ -2,6 +2,7 @@
 {"dg-publish":true,"permalink":"/200-299-areas/230-marketing/02-websites-vercel/corma-de/generisches-setup-und-templates/installation-und-erstes-setup-fuer-website-projekt-mit-cursor/","tags":["gardenEntry"]}
 ---
 
+# Installation und erstes Setup für Website-Projekt mit cursor
 # 🚀 Next.js 15 Website Setup - Komplettanleitung
 
 > **Für:** Professionelle Next.js Websites mit Design System
