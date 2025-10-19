@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/200-299-areas/230-marketing/02-websites-vercel/corma-de/generisches-setup-und-templates/installation-und-erstes-setup-fuer-website-projekt-mit-cursor/"}
+{"dg-publish":true,"dg-permalink":"setup","permalink":"/setup/"}
 ---
 
 # Installation und erstes Setup für Website-Projekt mit cursor
